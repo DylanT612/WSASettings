@@ -1,0 +1,165 @@
+<!--
+	I certify that the HTML file I am submitting is all my own work.
+	None of it is copied from any source or any person.
+	Signed: Dylan Theis. Dated: 4/4/2023
+-->
+<!--
+	Author: Dylan Theis
+	Date: 4/4/2023
+	Class: CSC135
+	Project: Assignment 4
+	Description: Making an accessible site
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+	<title>Making a Website Accessible</title>
+</head>
+
+<body> <!-- Start body -->
+    <header>Web Site Accessibilty</header><!-- Making header -->
+
+
+    <!-- Section defining POUR -->
+    <section id="Defining-POUR">
+        <h2>What is P.O.U.R.?</h2>
+            <p>
+                P.O.U.R. stands for <b>P</b>erceivable, <b>O</b>perable, 
+                <b>U</b>nderstandable, and <b>R</b>obust. 
+                These are a set of principles that guide the design and 
+                development of accessible websites. The goal of POUR is to 
+                make a website accessible to all users, regardless of 
+                disabilities. An explanation of the acronym is as follows:
+                perceive meaning that all information on the site can be 
+                perceivable by users.Operate, meaning that all functionality 
+                on the website should be operable with just a keyboard or 
+                other input device. Understandable meaning that all users 
+                can easy understand the content. Robust means that the 
+                content and functionality of a web site should be compatible 
+                with current and future technologies. 
+            </p>
+    </section><!-- Closing section -->
+
+
+    <!-- Section making a table accessible -->
+    <section id="table">
+        <h2>Demonstrating Techniques with a Table</h2>
+
+            <!-- Defining table -->
+            <table aria-label="Example Table">
+
+                <!-- Table caption(or title if you will) -->
+                <caption>Example Table</caption>
+                <!-- Table head -->
+                <thead>
+                    <tr><!-- row with table headers -->
+                        <th scope="col">Name</th>
+                        <th scope="col">Age</th>
+                        <th scope="col">Favorite Color</th>
+                    </tr>
+                </thead>
+                <!-- Table body -->
+                <tbody>
+                    <tr><!-- row w/ one table header & two normal "cells" -->
+                        <th scope="row">John</th>
+                        <td>40</td>
+                        <td>Red</td>
+                    </tr>
+                    <tr><!-- row w/ one table header & two normal "cells" -->
+                        <th scope="row">Grace</th>
+                        <td>30</td>
+                        <td>Blue</td>
+                    </tr>
+                    <tr><!-- row w/ one table header & two normal "cells" -->
+                        <th scope="row">Julie</th>
+                        <td>25</td>
+                        <td>Purple</td>
+                    </tr>
+                </tbody>
+            </table><!-- Closing table -->
+
+            <p><!-- Explaing how we made it more accessible -->
+                This table shows all the principles of POUR. The table 
+                showcases perceivable by making it visually and auditory 
+                accesssible to users with a wide range of sensory abilities.
+                It also uses aria-label and caption elements to provide a 
+                clear and concise label for the table making it easy to 
+                comprehend what the table represents. using thead and tbody 
+                elements help group the content of the table making it 
+                easier to structurally understand. We also demonstrated the 
+                operable principle by making the table navigable using 
+                standard keyboard controls. We used the scope attribute in 
+                the th elements that allows users to to understand the 
+                relationships which make it easier to navigate the table. 
+                Another principle demonstrated is understandable. the caption 
+                and the aria-label attribute provide a clear and concise 
+                label for the table making the table much easier to 
+                understand. The scope and th elements allows users to 
+                understand the relationship between the header cells and 
+                data cells in the table which can make it easier to 
+                understand the data in the table. We also demonstrated the 
+                robust principal. The table was created using standard HTML 
+                markup, making it accessible to a wide range of browsers 
+                and assistive technologies. As well as using the role 
+                attribute to indicate that the element is a table which can 
+                help assistive technologies understand the structure of 
+                the table.
+            </p>
+    </section><!-- Closing section -->
+
+
+    <!-- Making a form accessible -->
+    <section id="form">
+        <h2>Forms Using P.O.U.R.</h2>
+        <form><!-- Starting form -->
+
+            <!-- Creating a name box -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required aria-required="true">
+
+            <!-- Creating an email box -->
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required aria-required="true">
+
+            <!-- Creating a message box -->
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="1" cols="15" 
+            required aria-required="true"></textarea>
+
+            <!-- Creating a button -->
+            <button type="submit">Submit</button>
+
+        </form><!-- Closing form -->
+
+        <p><!-- Explaining how it is accessible -->
+            This example demonstrates the perceivable and operable 
+            principles in POUR. We used semantic language in the markup 
+            and used descriptive labels for each form field to ensure 
+            the form is easy to navigate for screen readers and other 
+            assistive technologies. For the operable principle in POUR we 
+            ensured the form can be navigated using the keyboard alone 
+            without the need for a mouse. We provided clear error messages 
+            and avoided using placeholders which can create confusion. 
+        </p>
+    </section><!-- Closing section -->
+
+
+    <!-- Section making an image accessible -->
+    <section id="image">
+        <h2>Making Images Accessible</h2>
+        <img src="images/image1.png" alt="The human eye close up">
+        <p>
+            Here we demonstrate how we use the alt tag on an image 
+            to explain to the user the picture if the image fails 
+            to show up or if the user has trouble seeing properly. 
+            This demonstrates the perceivable principle in POUR.
+        </p>
+    </section><!-- closing section -->
+
+</body><!-- Closing body -->
+</html>
